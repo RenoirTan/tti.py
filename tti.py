@@ -32,9 +32,9 @@ def prime_factors(n: int) -> t.Dict[int, int]:
 
 def closest_factors_to_sqrt(n: int) -> t.Tuple[int, int]:
     """
-    Find the 2 factors of an integers that are closest to the its square root.
+    Find the 2 factors of an integers that are closest to its square root.
     This function is useful for calculating the dimensions for a 2D image which
-    you want to be a square as close as possible.
+    is as close to a square as possible.
     
     Example
     -------
@@ -77,9 +77,9 @@ def recommend_img_dim(pixels: int, portrait: bool = False) -> t.Tuple[int, int]:
     
     Examples
     --------
-    >>> closest_factors_to_sqrt(255)
+    >>> recommend_img_dim(255)
     (17, 15)
-    >>> closest_factors_to_sqrt(255, portrait=True)
+    >>> recommend_img_dim(255, portrait=True)
     (15, 17)
     """
     a, b = closest_factors_to_sqrt(pixels)
@@ -353,7 +353,7 @@ class Decoder(object):
     
     def decode_image_with_path(self, path: os.PathLike) -> bytes:
         """
-        Decode an image at a path.
+        Decode an image whose path is known.
         
         Parameters
         ----------
